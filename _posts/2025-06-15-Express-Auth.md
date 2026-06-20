@@ -160,7 +160,7 @@ backend/
 
 ### Creating the models 
 
-Now we will create our models. 
+Now we will create our models.
 
 A *model* or *schema* is basically how our data is stored inside the database. It is a blueprint to tell us how should the data look like (e.g. which fields should the data have, the restrictions to each field, etc). The two main types of database are *SQL* and *NoSQL*. Basically, a *SQL* database require the data to follow the schema as strictly as possible, and invalid data (which does not follow the schema) will not allowed to be persisted. On the other hand, *NoSQL* database are databases that are more flexible, allowing users to store data that does not have a fixed schema. 
 
@@ -232,6 +232,8 @@ Next, for our `Contact`:
 
 > Task: Create our `Contact` model inside `backend/src/models`. It should have name, number, and a belongsTo field that reference back to an user. When referring to other objects, use its ObjectId. You should also add some validation of your choice - looking up some public regex can be a good idea.
 {: .prompt-tip}
+
+(Guiding questions: Before unblurring, think about this: a User can own many contacts (a *list* of contacts), but a Contact only *belongs to* one User. Look at the user.ts file for reference before typing the belongsTo field) 
 
 **Answer (click to unblur):**
 

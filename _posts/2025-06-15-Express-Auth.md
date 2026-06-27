@@ -233,7 +233,7 @@ Next, for our `Contact`:
 > Task: Create our `Contact` model inside `backend/src/models`. It should have name, number, and a belongsTo field that reference back to an user. When referring to other objects, use its ObjectId. You should also add some validation of your choice - looking up some public regex can be a good idea.
 {: .prompt-tip}
 
-(Guiding questions: Before unblurring, think about this: a User can own many contacts (a *list* of contacts), but a Contact only *belongs to* one User. Look at the user.ts file for reference before typing the belongsTo field) 
+(Guiding tips: Before unblurring, think about this: a User can own many contacts (a *list* of contacts), but a Contact only *belongs to* one User. Look at the user.ts file for reference before typing the belongsTo field) 
 
 **Answer (click to unblur):**
 
@@ -285,7 +285,7 @@ If you were able to understand the `User` file above, this file should be pretty
 
 After we have defined our models, we can move on to write controllers. 
 
-A *controller* can generally be understood as your request handler. For example, if you create a GET request to `localhost:3001/api/users`, the controllers will handle that request, do various backend operations, such as talking/querying to database or getting the data, and then send back to you the response from the server.  For most applications, with each model, you should write all the [CRUD](https://www.codecademy.com/article/what-is-crud) controllers for each object. In RESTful applications, that translates to four types of request: GET, POST, DELETE, PUT/PATCH.
+A *controller* can generally be understood as your request handler. For example, if you create a GET request to `localhost:3001/api/users`, the controllers will handle that request, do various backend operations, such as talking/querying to database or getting the data, and then send back to you the response from the server.  For most applications, with each model, you should write all the [CRUD](https://www.codecademy.com/article/what-is-crud) controllers for each object. In RESTful applications, that translates to four types of requests: GET, POST, DELETE, PUT/PATCH.
 
 For the scope of this app, I'm going to simplify things a bit. For `User`, we just want a `POST` request (registering new users) and a GET request (for login). For `Contact`, we want a GET, POST, and DELETE. 
 

@@ -321,7 +321,7 @@ export const getById = async (req: Request, res: Response, next: NextFunction) =
   }
 }
 ```
-(Developer Check: Pay attention to the try catch blocks. They are essential for determining the success/failure state from calling the database. General rule of thumb: use try/catch blocks for async functions that use AWAIT)
+(Developer Check: Pay attention to the try catch blocks. In this case, they are essential for determining the success/failure state of the database call. Without try/catch, there is no error handling for database call failure and throws exception or error state. General rule of thumb: use try/catch blocks for async functions that use AWAIT)
 
 `Request, Response, NextFunction` are types required for our `req, res, next` arguments. `User.find({})` is used to get all users from the database. 
 
